@@ -229,20 +229,42 @@ void Dialogs::CreateMemoryCardDialog::CreateControls()
 	const RadioPanelItem tbl_CardTypes[] =
 	{
 		RadioPanelItem(_("8 MB [most compatible]"), _("This is the standard Sony-provisioned size, and is supported by all games and BIOS versions."))
-		.	SetToolTip(_t("Always use this option if you want the safest and surest memory card behavior."))
-		.	SetInt(8),
+			.SetToolTip(_t("Always use this option if you want the safest and surest memory card behavior."))
+			.SetInt(8),
 
 		RadioPanelItem(_("16 MB"), _("A typical size for 3rd-party memory cards which should work with most games."))
-		.	SetToolTip(_t("16 and 32 MB cards have roughly the same compatibility factor."))
-		.	SetInt(16),
+			.SetToolTip(_t("16 and 32 MB cards have roughly the same compatibility factor."))
+			.SetInt(16),
 
 		RadioPanelItem(_("32 MB"), _("A typical size for 3rd-party memory cards which should work with most games."))
-		.	SetToolTip(_t("16 and 32 MB cards have roughly the same compatibility factor."))
-		.	SetInt(32),
+			.SetToolTip(_t("16 and 32 MB cards have roughly the same compatibility factor."))
+			.SetInt(32),
 
 		RadioPanelItem(_("64 MB"), _("Low compatibility warning: Yes it's very big, but may not work with many games."))
-		.	SetToolTip(_t("Use at your own risk.  Erratic memory card behavior is possible (though unlikely)."))
-		.	SetInt(64),
+			.SetToolTip(_t("Use at your own risk.  Erratic memory card behavior is possible (though unlikely)."))
+			.SetInt(64),
+
+
+		// PCSX2 obviously already have the function which calculates the memory card size and creates the memory card.
+		// Option to create 128MB Memory Card
+		RadioPanelItem(_("128MB"), _("Low compatibilty warning: This is a very big memory card, games that supported 64MB memory cards should still support 128MB memory card."))
+			.SetToolTip(_t("Use at your own risk. There might be some additional games failing to read the memory card or writing to the memory card."))
+			.SetInt(128),
+
+		// Option to create 256MB Memory Card
+		RadioPanelItem(_("256MB"), _("Very low compatibilty warning: This is a very big memory card."))
+			.SetToolTip(_t("Use at your own risk. There might be some additional games failing to read the memory card or writing to the memory card. There is more chance of the games and PS2 Browser taking more time to read the data within the memory card."))
+			.SetInt(256),
+
+		// Option to create 512MB Memory Card
+			RadioPanelItem(_("512MB"), _("Very low compatibilty warning: This is a very big memory card."))
+				.SetToolTip(_t("Use at your own risk. There might be some additional games failing to read the memory card or writing to the memory card. There is more chances of the games and PS2 Browser taking more time to read the data within the memory card."))
+				.SetInt(512),
+
+		// Option to create 1024MB Memory Card
+			RadioPanelItem(_("1024MB/1.024GB"), _("Significantly low compatibilty warning: This is a massive memory card."))
+				.SetToolTip(_t("Use at your own risk. There might be some additional games failing to read the memory card or writing to the memory card. There is a significant chance of games and PS2 Browser taking more time to read the data within the memory card."))
+				.SetInt(1024),
 
 		RadioPanelItem(_("Folder [Recommended]"), _("Store memory card contents in the host filesystem instead of a file."))
 		.	SetToolTip(_t("Dynamically allocate and store memory card contents in a folder.\n" 
