@@ -1,4 +1,14 @@
 # PCSX2
+## NOTE
+I and PCSX2 dev team cannot support you on any issues you have with games, regarding with 128MB or higher capacity memory cards. There will be obvious compatibility issues with some games and high capacity memory cards!. You WILL encounter longer memory card reading times, both in-game and in PS2's Browser.
+
+
+## New Memory Card Capacities
+- 128MB
+- 256MB
+- 512MB
+
+I have left the original PCSX2 formatting below in case, it will help you somehow.
 
 ![Windows Build Status](https://img.shields.io/github/workflow/status/PCSX2/pcsx2/%F0%9F%96%A5%EF%B8%8F%20Windows%20Builds/master?label=Windows%20Builds)
 ![Linux Build Status](https://img.shields.io/github/workflow/status/PCSX2/pcsx2/%F0%9F%90%A7%20Linux%20Builds/master?label=Linux%20Builds)
