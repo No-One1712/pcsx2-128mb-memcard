@@ -1,0 +1,3 @@
+Create a new memory card as normal, the new options will be shown in the dialogs.
+
+After created, they will be located (hopefully) in memcards folder. You can move the memcard to your actual main PCSX2 build, as it will work on the main build.
